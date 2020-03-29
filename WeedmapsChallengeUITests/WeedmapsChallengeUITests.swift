@@ -26,10 +26,14 @@ class WeedmapsChallengeUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testTabBarTitleLabelsExist() {
+    func testOpenSafariFromSearchExist() {
         let app = XCUIApplication()
-        XCTAssertTrue(app.staticTexts["Home Title Label"].exists)
-        app.tabBars.buttons["Favorites"].tap()
-        XCTAssertTrue(app.staticTexts["Favorites Title Label"].exists)
+        app.searchFields.element.tap()
+        app.searchFields.element.typeText("coffee")
+        app.buttons["Miami"].tap()
+        app.buttons["Search"].tap()
+        app.collectionViews.cells.element(boundBy:0).tap()
+        XCTAssertTrue(app.buttons["Open with Safari"].exists)
+        
     }
 }

@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
         searchController.searchBar.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Businesses"
-        searchController.searchBar.scopeButtonTitles = getLocationData()
+        searchController.searchBar.scopeButtonTitles = getLocationScopeData()
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
@@ -118,7 +118,7 @@ class HomeViewController: UIViewController {
     
     // MARK: Helpers
     
-    private func getLocationData() -> [String] {
+    private func getLocationScopeData() -> [String] {
         
         var arrayOfLocations = ["Miami", "New York"]
         if locationProvider.locationAllowed {
