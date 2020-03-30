@@ -16,4 +16,5 @@ protocol EndPointType {
     var task: HTTPTask { get }
     var headers: HTTPHeaders? { get }
     var parametersEncoding: ParameterEncoding { get }
+    var stubbedResponse:String { get }
 }

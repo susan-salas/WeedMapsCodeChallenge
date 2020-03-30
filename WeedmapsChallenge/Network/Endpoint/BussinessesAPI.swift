@@ -49,6 +49,10 @@ extension BussinessesAPI: EndPointType {
     var parametersEncoding: ParameterEncoding {
         return .url
     }
+    
+    var stubbedResponse:String {
+        return "BusinessSearch"
+    }
 }
 
 

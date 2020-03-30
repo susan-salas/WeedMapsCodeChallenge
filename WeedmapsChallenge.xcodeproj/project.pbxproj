@@ -15,6 +15,8 @@
 		3620D0DB242B160C00E4DE80 /* URLSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3620D0DA242B160C00E4DE80 /* URLSessionProvider.swift */; };
 		3620D0DD242B19BD00E4DE80 /* BussinessesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3620D0DC242B19BD00E4DE80 /* BussinessesAPI.swift */; };
 		3627234E2431168900376522 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3670591124302E18002557CF /* AccessibilityIdentifiers.swift */; };
+		3627235524312A9B00376522 /* BusinessSearch.json in Resources */ = {isa = PBXBuildFile; fileRef = 3627235424312A9B00376522 /* BusinessSearch.json */; };
+		362723582431A16500376522 /* MockedURLSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362723572431A16500376522 /* MockedURLSessionProvider.swift */; };
 		3670591224302E18002557CF /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3670591124302E18002557CF /* AccessibilityIdentifiers.swift */; };
 		369FFD55242E3C8200EA9A66 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369FFD54242E3C8200EA9A66 /* Location.swift */; };
 		369FFD57242E435700EA9A66 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369FFD56242E435700EA9A66 /* UIImage+Extensions.swift */; };
@@ -70,6 +72,8 @@
 		3620D0D8242B156500E4DE80 /* URLSessionProtoccol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtoccol.swift; sourceTree = "<group>"; };
 		3620D0DA242B160C00E4DE80 /* URLSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProvider.swift; sourceTree = "<group>"; };
 		3620D0DC242B19BD00E4DE80 /* BussinessesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BussinessesAPI.swift; sourceTree = "<group>"; };
+		3627235424312A9B00376522 /* BusinessSearch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BusinessSearch.json; sourceTree = "<group>"; };
+		362723572431A16500376522 /* MockedURLSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedURLSessionProvider.swift; sourceTree = "<group>"; };
 		3670591124302E18002557CF /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
 		369FFD54242E3C8200EA9A66 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		369FFD56242E435700EA9A66 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
@@ -180,6 +184,22 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		362723512431284800376522 /* StubbedJSONData */ = {
+			isa = PBXGroup;
+			children = (
+				3627235424312A9B00376522 /* BusinessSearch.json */,
+			);
+			path = StubbedJSONData;
+			sourceTree = "<group>";
+		};
+		362723562431669F00376522 /* MockedClasses */ = {
+			isa = PBXGroup;
+			children = (
+				362723572431A16500376522 /* MockedURLSessionProvider.swift */,
+			);
+			path = MockedClasses;
+			sourceTree = "<group>";
+		};
 		3670591024302D6B002557CF /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +275,8 @@
 		5ABB14922167C42700A2CB2C /* WeedmapsChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				362723562431669F00376522 /* MockedClasses */,
+				362723512431284800376522 /* StubbedJSONData */,
 				5ABB14932167C42700A2CB2C /* YelpAPIClientTests.swift */,
 				5ABB14952167C42700A2CB2C /* Info.plist */,
 			);
@@ -481,6 +503,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3627235524312A9B00376522 /* BusinessSearch.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +621,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				362723582431A16500376522 /* MockedURLSessionProvider.swift in Sources */,
 				5ABB14942167C42700A2CB2C /* YelpAPIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

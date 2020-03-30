@@ -64,10 +64,10 @@ class HomeViewController: UIViewController {
                 }
             }
         case .term(let location):
-            sessionProvider.request(type: BusinessResponse.self, service: BussinessesAPI.searchTermLocationSearch(searchTerm: term, searchLocation: location)) { response in//TODO weak self
+            sessionProvider.request(type: BusinessResponse.self, service: BussinessesAPI.searchTermLocationSearch(searchTerm: term, searchLocation: location)) { [weak self] response in
                 switch response {
                 case let .success(response):
-                    self.searchResults = response.businesses
+                    self?.searchResults = response.businesses
                 case let .failure(error):
                     print(error)
                 }

@@ -8,6 +8,8 @@
 
 import Foundation
 
+//static ids we're not used as UI elements in project did not have accessibilityIdentifiers attirubute. If they did these would be utlized to decrease hard coding strings in UI tests.
+
 struct HomeViewControllerAccessibilityID {
     static let openSafariButton = "HomeOpenSafariButton"
     
