@@ -10,5 +10,5 @@ import Foundation
 
 struct BusinessResponse: Decodable {
     
-    let businesses:[Business]
+    let businesses:[Business]?
 }

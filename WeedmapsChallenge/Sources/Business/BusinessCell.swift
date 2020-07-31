@@ -15,8 +15,12 @@ class BusinessCell: UICollectionViewCell {
     
     func setupCellWith(business: Business) {
         businessTitleLabel.text = business.name
-        bubinessImageView.loadImage(from: business.image_url)
-        ratingLabel.text = "Rating: \(business.rating)"
+        bubinessImageView.loadImage(from: business.image_url ?? "")
+        if let rating = business.rating {
+            ratingLabel.text = "Rating: \(rating)"
+        }else {
+            ratingLabel.text = ""
+        }
     }
     
     override func prepareForReuse() {

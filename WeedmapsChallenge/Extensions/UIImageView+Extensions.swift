@@ -12,9 +12,7 @@ import UIKit
 
 extension UIImageView {
     func loadImage(from endPoint: String) {
-        
-        let imageEndPoint = endPoint
-        
+                
         func setImage(_ image: UIImage) {
             DispatchQueue.main.async {
                 self.image = image

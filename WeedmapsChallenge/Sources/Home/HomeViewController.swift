@@ -55,10 +55,13 @@ class HomeViewController: UIViewController {
         
         switch location {
         case .coordinates(let latitude, let longitude):
-            sessionProvider.request(type: BusinessResponse.self, service: BussinessesAPI.searchTermCoordiantes(searchTerm: term, latitude: String(latitude), longitude: String(longitude))) { (response) in
+            sessionProvider.request(type: BusinessResponse.self, service: BussinessesAPI.searchTermCoordiantes(searchTerm: term, latitude: String(latitude), longitude: String(longitude))) { [weak self] (response) in
                 switch response {
                 case let .success(response):
-                    self.searchResults = response.businesses
+                    if let result = response.businesses {
+                        self?.searchResults = result
+                    }
+                
                 case let .failure(error):
                     print(error)
                 }
@@ -67,7 +70,9 @@ class HomeViewController: UIViewController {
             sessionProvider.request(type: BusinessResponse.self, service: BussinessesAPI.searchTermLocationSearch(searchTerm: term, searchLocation: location)) { [weak self] response in
                 switch response {
                 case let .success(response):
-                    self?.searchResults = response.businesses
+                    if let result = response.businesses {
+                        self?.searchResults = result
+                    }
                 case let .failure(error):
                     print(error)
                 }
@@ -95,7 +100,7 @@ class HomeViewController: UIViewController {
         let alert = UIAlertController(title: "View Yelp Page", message: "Please Select an Option", preferredStyle: .actionSheet)
 
         alert.addAction(UIAlertAction(title: "Open with Safari", style: .default , handler:{ (UIAlertAction)in
-            self.goToSafari(url: business.url)
+            self.goToSafari(url: business.url ?? "")
         }))
 
         alert.addAction(UIAlertAction(title: "Open with in WebView", style: .default , handler:{ (UIAlertAction)in

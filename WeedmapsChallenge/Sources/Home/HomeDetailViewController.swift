@@ -15,7 +15,7 @@ class HomeDetailViewController: UIViewController {
     // MARK: Control
     
     func configure(with business: Business) {
-        if let url = URL(string: business.url) {
+        if let url = URL(string: business.url ?? "") {
             let request = URLRequest(url: url)
             webView.load(request)
         }
